@@ -1,0 +1,41 @@
+services:
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: regulatory-navigator-ollama
+    volumes:
+      - ollama_models:/root/.ollama
+    ports:
+      - "11434:11434"
+    environment:
+      - OLLAMA_NUM_PARALLEL=4
+      - OLLAMA_MAX_QUEUE=512
+      - OLLAMA_KEEP_ALIVE=24h
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:11434/api/version"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  app:
+    build: .
+    container_name: regulatory-navigator-app
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    depends_on:
+      ollama:
+        condition: service_healthy
+    volumes:
+      - hf_cache:/home/appuser/.cache/huggingface
+      - ./results:/app/results
+    restart: unless-stopped
+
+volumes:
+  ollama_models:   # persists downloaded LLM weights across restarts
+  hf_cache:        # persists HuggingFace embedding/reranker models

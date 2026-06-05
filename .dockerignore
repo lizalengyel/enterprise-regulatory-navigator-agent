@@ -1,0 +1,17 @@
+.venv/
+.git/
+.env
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.vscode/
+results/
+tests/
+data/raw/
+data/processed/
+*.mmd
+*.png
+RAG*.pdf
+uv.lock
+README.md

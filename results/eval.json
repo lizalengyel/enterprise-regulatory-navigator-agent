@@ -1,0 +1,538 @@
+{
+  "n_total": 20,
+  "n_in_scope": 17,
+  "n_noise": 3,
+  "profiler": {
+    "overall_accuracy": 0.118,
+    "industry_match_rate": 0.667,
+    "ai_use_case_accuracy": 1.0,
+    "intent_match_rate": 0.118
+  },
+  "rag": {
+    "regulation_hit_rate": 1.0,
+    "article_hit_rate": 0.765,
+    "keyword_hit_rate": 0.941,
+    "mean_evidence_score": 0.596,
+    "web_search_rate": 1.0
+  },
+  "robustness": {
+    "noise_routed_correctly": 1.0
+  },
+  "records": [
+    {
+      "idx": 1,
+      "query": "A company suffers a personal data breach. What are the notification obligations?",
+      "noise": false,
+      "elapsed_s": 19.1,
+      "profiler": {
+        "industry_match": false,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "general",
+          "ai_use_case": null,
+          "intent": "notification obligations",
+          "jurisdiction": "general"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.611,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "GDPR"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 2,
+      "query": "What rights does a data subject have under GDPR?",
+      "noise": false,
+      "elapsed_s": 4.65,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "unspecified",
+          "ai_use_case": null,
+          "intent": "rights",
+          "jurisdiction": "EU"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.631,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "GDPR"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 3,
+      "query": "When is a Data Protection Officer required under GDPR?",
+      "noise": false,
+      "elapsed_s": 4.15,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "unknown",
+          "ai_use_case": null,
+          "intent": "when is a DPO required under GDPR",
+          "jurisdiction": "EU"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.605,
+        "regulation_hit": true,
+        "article_hit": false,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "GDPR"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 4,
+      "query": "Can personal data be transferred to a third country under GDPR?",
+      "noise": false,
+      "elapsed_s": 4.23,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "data protection",
+          "ai_use_case": null,
+          "intent": "transfer",
+          "jurisdiction": "EU"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.617,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "GDPR"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 5,
+      "query": "A bank outsources critical services to a cloud provider. What DORA obligations apply?",
+      "noise": false,
+      "elapsed_s": 4.38,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "banking",
+          "ai_use_case": null,
+          "intent": "DORA obligations",
+          "jurisdiction": "EU"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.597,
+        "regulation_hit": true,
+        "article_hit": false,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "DORA"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 6,
+      "query": "What incident reporting timelines are required under DORA?",
+      "noise": false,
+      "elapsed_s": 4.44,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": true,
+        "overall": true,
+        "extracted": {
+          "industry": "cybersecurity",
+          "ai_use_case": null,
+          "intent": "regulatory_compliance",
+          "jurisdiction": "eu"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.567,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "DORA"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 7,
+      "query": "What is Threat-Led Penetration Testing under DORA?",
+      "noise": false,
+      "elapsed_s": 3.93,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "cybersecurity",
+          "ai_use_case": null,
+          "intent": "definition",
+          "jurisdiction": "UK"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.536,
+        "regulation_hit": true,
+        "article_hit": false,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "DORA"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 8,
+      "query": "What ICT risk management obligations does DORA impose on financial entities?",
+      "noise": false,
+      "elapsed_s": 5.75,
+      "profiler": {
+        "industry_match": false,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "finance",
+          "ai_use_case": null,
+          "intent": "information",
+          "jurisdiction": "EU"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.632,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "DORA"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 9,
+      "query": "What cybersecurity measures are required for essential entities under NIS2?",
+      "noise": false,
+      "elapsed_s": 3.26,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "cybersecurity",
+          "ai_use_case": null,
+          "intent": "ask_about_requirements",
+          "jurisdiction": "eu"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.611,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "NIS2"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 10,
+      "query": "What are the incident notification obligations under NIS2?",
+      "noise": false,
+      "elapsed_s": 3.04,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "cybersecurity",
+          "ai_use_case": null,
+          "intent": "information",
+          "jurisdiction": "European Union"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.584,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "NIS2"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 11,
+      "query": "Which sectors fall under NIS2 as essential entities?",
+      "noise": false,
+      "elapsed_s": 6.1,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "critical_infrastructure",
+          "ai_use_case": null,
+          "intent": "sector_list",
+          "jurisdiction": "EU"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.557,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "NIS2"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 12,
+      "query": "A bank uses AI to assess loan applications. Is this a high-risk AI system?",
+      "noise": false,
+      "elapsed_s": 6.13,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": true,
+        "overall": true,
+        "extracted": {
+          "industry": "banking",
+          "ai_use_case": "loan application assessment",
+          "intent": "risk assessment",
+          "jurisdiction": "unknown"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.597,
+        "regulation_hit": true,
+        "article_hit": false,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "AI Act"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 13,
+      "query": "What transparency obligations apply to general-purpose AI models?",
+      "noise": false,
+      "elapsed_s": 5.88,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "general-purpose AI",
+          "ai_use_case": "transparency obligations",
+          "intent": "transparency obligations",
+          "jurisdiction": "general jurisdiction"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.649,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "AI Act"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 14,
+      "query": "What AI practices are prohibited under the EU AI Act?",
+      "noise": false,
+      "elapsed_s": 5.61,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "AI",
+          "ai_use_case": "null",
+          "intent": "prohibition",
+          "jurisdiction": "EU"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.624,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "AI Act"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 15,
+      "query": "A bank wants to deploy a GenAI chatbot for customer complaints. What obligations apply?",
+      "noise": false,
+      "elapsed_s": 4.72,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "banking",
+          "ai_use_case": "customer complaint resolution",
+          "intent": "regulatory obligations",
+          "jurisdiction": "null"
+        }
+      },
+      "rag": {
+        "evidence_score": 0.569,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": false,
+        "regulations_covered": [
+          "AI Act"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 16,
+      "query": "An employer uses AI to screen job applicants.",
+      "noise": false,
+      "elapsed_s": 2.83,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "employment",
+          "ai_use_case": "job screening",
+          "intent": "AI in employment",
+          "jurisdiction": ""
+        }
+      },
+      "rag": {
+        "evidence_score": 0.582,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "AI Act"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 17,
+      "query": "A hospital uses AI for patient triage.",
+      "noise": false,
+      "elapsed_s": 5.25,
+      "profiler": {
+        "industry_match": true,
+        "ai_use_case_correct": true,
+        "intent_match": false,
+        "overall": false,
+        "extracted": {
+          "industry": "healthcare",
+          "ai_use_case": "patient triage",
+          "intent": "AI in healthcare",
+          "jurisdiction": ""
+        }
+      },
+      "rag": {
+        "evidence_score": 0.556,
+        "regulation_hit": true,
+        "article_hit": true,
+        "keyword_hit": true,
+        "regulations_covered": [
+          "AI Act"
+        ],
+        "web_search_needed": true
+      }
+    },
+    {
+      "idx": 18,
+      "query": "How do you play Uno?",
+      "noise": true,
+      "elapsed_s": 1.86,
+      "profiler": {
+        "skipped": true
+      },
+      "rag": {
+        "skipped": true,
+        "routed_correctly": true
+      }
+    },
+    {
+      "idx": 19,
+      "query": "What is the best recipe for chocolate cake?",
+      "noise": true,
+      "elapsed_s": 2.1,
+      "profiler": {
+        "skipped": true
+      },
+      "rag": {
+        "skipped": true,
+        "routed_correctly": true
+      }
+    },
+    {
+      "idx": 20,
+      "query": "Who won the FIFA World Cup in 2022?",
+      "noise": true,
+      "elapsed_s": 2.28,
+      "profiler": {
+        "skipped": true
+      },
+      "rag": {
+        "skipped": true,
+        "routed_correctly": true
+      }
+    }
+  ]
+}

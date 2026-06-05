@@ -1,0 +1,39 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	use_case_profiler(use_case_profiler)
+	out_of_scope(out_of_scope)
+	regulation_router(regulation_router)
+	rag(rag)
+	evidence_sufficiency(evidence_sufficiency)
+	web_search(web_search)
+	external_evidence_summarizer(external_evidence_summarizer)
+	risk_obligation_analyzer(risk_obligation_analyzer)
+	checklist_generator(checklist_generator)
+	risk_scorer(risk_scorer)
+	answer_composer(answer_composer)
+	citation_guardrail_validator(citation_guardrail_validator)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> use_case_profiler;
+	answer_composer --> citation_guardrail_validator;
+	checklist_generator --> answer_composer;
+	evidence_sufficiency -. &nbsp;risk_analyzer&nbsp; .-> risk_obligation_analyzer;
+	evidence_sufficiency -.-> web_search;
+	external_evidence_summarizer --> evidence_sufficiency;
+	rag --> evidence_sufficiency;
+	regulation_router --> rag;
+	risk_obligation_analyzer --> checklist_generator;
+	risk_obligation_analyzer --> risk_scorer;
+	risk_scorer --> answer_composer;
+	use_case_profiler -.-> out_of_scope;
+	use_case_profiler -. &nbsp;in_scope&nbsp; .-> regulation_router;
+	web_search --> external_evidence_summarizer;
+	citation_guardrail_validator --> __end__;
+	out_of_scope --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

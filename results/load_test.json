@@ -1,0 +1,1037 @@
+{
+  "config": {
+    "n_queries": 50,
+    "repeat": 5,
+    "workers": 4,
+    "n_success": 47,
+    "n_errors": 3
+  },
+  "wall_s": 5389.978,
+  "throughput_qps": 0.009,
+  "web_search_rate": 0.596,
+  "latency": {
+    "mean_s": 326.446,
+    "median_s": 231.145,
+    "p75_s": 252.471,
+    "p90_s": 293.116,
+    "p95_s": 327.945,
+    "p99_s": 2432.366,
+    "min_s": 144.719,
+    "max_s": 2440.64,
+    "stddev_s": 450.051
+  },
+  "bottlenecks": [
+    {
+      "node": "risk_scorer",
+      "mean_s": 183.638
+    },
+    {
+      "node": "answer_composer",
+      "mean_s": 67.085
+    },
+    {
+      "node": "risk_obligation_analyzer",
+      "mean_s": 34.294
+    },
+    {
+      "node": "external_evidence_summarizer",
+      "mean_s": 28.76
+    },
+    {
+      "node": "use_case_profiler",
+      "mean_s": 20.29
+    },
+    {
+      "node": "web_search",
+      "mean_s": 3.386
+    },
+    {
+      "node": "rag",
+      "mean_s": 1.974
+    },
+    {
+      "node": "evidence_sufficiency",
+      "mean_s": 0.001
+    },
+    {
+      "node": "checklist_generator",
+      "mean_s": 0.0
+    },
+    {
+      "node": "regulation_router",
+      "mean_s": 0.0
+    }
+  ],
+  "records": [
+    {
+      "idx": 4,
+      "query": "A company suffers a personal data breach. What are the notification obligations?",
+      "total_s": 215.508,
+      "attempts": 1,
+      "evidence_score": 0.611,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 52.66,
+        "regulation_router": 0.0,
+        "rag": 4.057,
+        "evidence_sufficiency": 0.002,
+        "risk_obligation_analyzer": 31.151,
+        "checklist_generator": 0.0,
+        "risk_scorer": 61.886,
+        "answer_composer": 65.647
+      },
+      "error": null
+    },
+    {
+      "idx": 2,
+      "query": "A company suffers a personal data breach. What are the notification obligations?",
+      "total_s": 250.773,
+      "attempts": 1,
+      "evidence_score": 0.611,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 53.21,
+        "regulation_router": 0.0,
+        "rag": 3.516,
+        "evidence_sufficiency": 0.001,
+        "risk_obligation_analyzer": 33.853,
+        "checklist_generator": 0.0,
+        "risk_scorer": 95.366,
+        "answer_composer": 64.737
+      },
+      "error": null
+    },
+    {
+      "idx": 1,
+      "query": "A company suffers a personal data breach. What are the notification obligations?",
+      "total_s": 257.098,
+      "attempts": 1,
+      "evidence_score": 0.611,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 53.174,
+        "regulation_router": 0.0,
+        "rag": 3.546,
+        "evidence_sufficiency": 0.0,
+        "risk_obligation_analyzer": 33.521,
+        "checklist_generator": 0.0,
+        "risk_scorer": 101.13,
+        "answer_composer": 65.632
+      },
+      "error": null
+    },
+    {
+      "idx": 3,
+      "query": "A company suffers a personal data breach. What are the notification obligations?",
+      "total_s": 266.877,
+      "attempts": 1,
+      "evidence_score": 0.611,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 53.211,
+        "regulation_router": 0.0,
+        "rag": 3.515,
+        "evidence_sufficiency": 0.0,
+        "risk_obligation_analyzer": 33.447,
+        "checklist_generator": 0.0,
+        "risk_scorer": 101.32,
+        "answer_composer": 75.288
+      },
+      "error": null
+    },
+    {
+      "idx": 6,
+      "query": "What rights does a data subject have under GDPR?",
+      "total_s": 147.567,
+      "attempts": 1,
+      "evidence_score": 0.631,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 11.493,
+        "regulation_router": 0.0,
+        "rag": 2.429,
+        "evidence_sufficiency": 0.0,
+        "risk_obligation_analyzer": 30.461,
+        "checklist_generator": 0.0,
+        "risk_scorer": 78.694,
+        "answer_composer": 24.487
+      },
+      "error": null
+    },
+    {
+      "idx": 7,
+      "query": "What rights does a data subject have under GDPR?",
+      "total_s": 197.324,
+      "attempts": 1,
+      "evidence_score": 0.631,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 14.036,
+        "regulation_router": 0.0,
+        "rag": 0.932,
+        "evidence_sufficiency": 0.0,
+        "risk_obligation_analyzer": 29.218,
+        "checklist_generator": 0.0,
+        "risk_scorer": 77.432,
+        "answer_composer": 75.698
+      },
+      "error": null
+    },
+    {
+      "idx": 5,
+      "query": "A company suffers a personal data breach. What are the notification obligations?",
+      "total_s": 242.563,
+      "attempts": 1,
+      "evidence_score": 0.673,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 54.285,
+        "regulation_router": 0.0,
+        "rag": 1.166,
+        "evidence_sufficiency": 0.001,
+        "web_search": 2.956,
+        "external_evidence_summarizer": 24.419,
+        "risk_obligation_analyzer": 23.258,
+        "checklist_generator": 0.0,
+        "risk_scorer": 77.467,
+        "answer_composer": 59.009
+      },
+      "error": null
+    },
+    {
+      "idx": 8,
+      "query": "What rights does a data subject have under GDPR?",
+      "total_s": 211.004,
+      "attempts": 1,
+      "evidence_score": 0.631,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 12.93,
+        "regulation_router": 0.0,
+        "rag": 1.024,
+        "evidence_sufficiency": 0.0,
+        "risk_obligation_analyzer": 25.196,
+        "checklist_generator": 0.0,
+        "risk_scorer": 83.405,
+        "answer_composer": 88.446
+      },
+      "error": null
+    },
+    {
+      "idx": 9,
+      "query": "What rights does a data subject have under GDPR?",
+      "total_s": 203.956,
+      "attempts": 1,
+      "evidence_score": 0.631,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 17.554,
+        "regulation_router": 0.0,
+        "rag": 1.539,
+        "evidence_sufficiency": 0.0,
+        "risk_obligation_analyzer": 31.474,
+        "checklist_generator": 0.0,
+        "risk_scorer": 84.962,
+        "answer_composer": 68.421
+      },
+      "error": null
+    },
+    {
+      "idx": 10,
+      "query": "What rights does a data subject have under GDPR?",
+      "total_s": 210.311,
+      "attempts": 1,
+      "evidence_score": 0.631,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 11.279,
+        "regulation_router": 0.0,
+        "rag": 2.522,
+        "evidence_sufficiency": 0.0,
+        "risk_obligation_analyzer": 27.711,
+        "checklist_generator": 0.0,
+        "risk_scorer": 90.922,
+        "answer_composer": 77.874
+      },
+      "error": null
+    },
+    {
+      "idx": 11,
+      "query": "A telecom operator suffers a major cyber incident. What obligations arise under NIS2?",
+      "total_s": 216.914,
+      "attempts": 1,
+      "evidence_score": 0.643,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 8.013,
+        "regulation_router": 0.0,
+        "rag": 2.145,
+        "evidence_sufficiency": 0.001,
+        "web_search": 1.9,
+        "external_evidence_summarizer": 22.435,
+        "risk_obligation_analyzer": 31.065,
+        "checklist_generator": 0.0,
+        "risk_scorer": 85.126,
+        "answer_composer": 66.216
+      },
+      "error": null
+    },
+    {
+      "idx": 12,
+      "query": "A telecom operator suffers a major cyber incident. What obligations arise under NIS2?",
+      "total_s": 213.542,
+      "attempts": 1,
+      "evidence_score": 0.643,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 7.6,
+        "regulation_router": 0.0,
+        "rag": 1.225,
+        "evidence_sufficiency": 0.001,
+        "web_search": 2.162,
+        "external_evidence_summarizer": 28.24,
+        "risk_obligation_analyzer": 28.47,
+        "checklist_generator": 0.0,
+        "risk_scorer": 97.162,
+        "answer_composer": 48.679
+      },
+      "error": null
+    },
+    {
+      "idx": 15,
+      "query": "A telecom operator suffers a major cyber incident. What obligations arise under NIS2?",
+      "total_s": 219.8,
+      "attempts": 1,
+      "evidence_score": 0.643,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 9.078,
+        "regulation_router": 0.0,
+        "rag": 1.179,
+        "evidence_sufficiency": 0.001,
+        "web_search": 2.079,
+        "external_evidence_summarizer": 23.936,
+        "risk_obligation_analyzer": 30.541,
+        "checklist_generator": 0.0,
+        "risk_scorer": 93.696,
+        "answer_composer": 59.276
+      },
+      "error": null
+    },
+    {
+      "idx": 14,
+      "query": "A telecom operator suffers a major cyber incident. What obligations arise under NIS2?",
+      "total_s": 237.808,
+      "attempts": 1,
+      "evidence_score": 0.643,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 9.37,
+        "regulation_router": 0.001,
+        "rag": 1.767,
+        "evidence_sufficiency": 0.001,
+        "web_search": 2.029,
+        "external_evidence_summarizer": 33.422,
+        "risk_obligation_analyzer": 32.638,
+        "checklist_generator": 0.0,
+        "risk_scorer": 105.13,
+        "answer_composer": 53.447
+      },
+      "error": null
+    },
+    {
+      "idx": 13,
+      "query": "A telecom operator suffers a major cyber incident. What obligations arise under NIS2?",
+      "total_s": 305.397,
+      "attempts": 1,
+      "evidence_score": 0.643,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 12.44,
+        "regulation_router": 0.0,
+        "rag": 1.675,
+        "evidence_sufficiency": 0.001,
+        "web_search": 2.528,
+        "external_evidence_summarizer": 33.587,
+        "risk_obligation_analyzer": 27.79,
+        "checklist_generator": 0.0,
+        "risk_scorer": 97.051,
+        "answer_composer": 130.322
+      },
+      "error": null
+    },
+    {
+      "idx": 17,
+      "query": "What cybersecurity risk management measures are required by NIS2?",
+      "total_s": 247.733,
+      "attempts": 1,
+      "evidence_score": 0.672,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 26.288,
+        "regulation_router": 0.0,
+        "rag": 2.588,
+        "evidence_sufficiency": 0.001,
+        "web_search": 3.08,
+        "external_evidence_summarizer": 24.533,
+        "risk_obligation_analyzer": 43.031,
+        "checklist_generator": 0.001,
+        "risk_scorer": 72.599,
+        "answer_composer": 75.598
+      },
+      "error": null
+    },
+    {
+      "idx": 18,
+      "query": "What cybersecurity risk management measures are required by NIS2?",
+      "total_s": 242.624,
+      "attempts": 1,
+      "evidence_score": 0.672,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 23.918,
+        "regulation_router": 0.0,
+        "rag": 1.195,
+        "evidence_sufficiency": 0.001,
+        "web_search": 2.052,
+        "external_evidence_summarizer": 32.658,
+        "risk_obligation_analyzer": 41.687,
+        "checklist_generator": 0.0,
+        "risk_scorer": 77.315,
+        "answer_composer": 63.791
+      },
+      "error": null
+    },
+    {
+      "idx": 21,
+      "query": "A bank outsources critical services to a cloud provider. What DORA obligations apply?",
+      "total_s": 233.745,
+      "attempts": 1,
+      "evidence_score": 0.659,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 9.327,
+        "regulation_router": 0.0,
+        "rag": 1.898,
+        "evidence_sufficiency": 0.001,
+        "web_search": 1.771,
+        "external_evidence_summarizer": 26.552,
+        "risk_obligation_analyzer": 37.474,
+        "checklist_generator": 0.0,
+        "risk_scorer": 97.2,
+        "answer_composer": 59.517
+      },
+      "error": null
+    },
+    {
+      "idx": 20,
+      "query": "What cybersecurity risk management measures are required by NIS2?",
+      "total_s": 337.608,
+      "attempts": 1,
+      "evidence_score": 0.672,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 26.137,
+        "regulation_router": 0.0,
+        "rag": 1.701,
+        "evidence_sufficiency": 0.001,
+        "web_search": 1.933,
+        "external_evidence_summarizer": 35.348,
+        "risk_obligation_analyzer": 33.623,
+        "checklist_generator": 0.0,
+        "risk_scorer": 186.847,
+        "answer_composer": 52.003
+      },
+      "error": null
+    },
+    {
+      "idx": 22,
+      "query": "A bank outsources critical services to a cloud provider. What DORA obligations apply?",
+      "total_s": 226.425,
+      "attempts": 1,
+      "evidence_score": 0.659,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 9.952,
+        "regulation_router": 0.0,
+        "rag": 1.709,
+        "evidence_sufficiency": 0.001,
+        "web_search": 2.111,
+        "external_evidence_summarizer": 26.211,
+        "risk_obligation_analyzer": 38.264,
+        "checklist_generator": 0.001,
+        "risk_scorer": 84.135,
+        "answer_composer": 64.032
+      },
+      "error": null
+    },
+    {
+      "idx": 23,
+      "query": "A bank outsources critical services to a cloud provider. What DORA obligations apply?",
+      "total_s": 253.15,
+      "attempts": 1,
+      "evidence_score": 0.659,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 12.682,
+        "regulation_router": 0.0,
+        "rag": 2.295,
+        "evidence_sufficiency": 0.001,
+        "web_search": 1.868,
+        "external_evidence_summarizer": 25.755,
+        "risk_obligation_analyzer": 39.985,
+        "checklist_generator": 0.001,
+        "risk_scorer": 101.197,
+        "answer_composer": 69.363
+      },
+      "error": null
+    },
+    {
+      "idx": 24,
+      "query": "A bank outsources critical services to a cloud provider. What DORA obligations apply?",
+      "total_s": 246.845,
+      "attempts": 1,
+      "evidence_score": 0.659,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 9.509,
+        "regulation_router": 0.0,
+        "rag": 2.01,
+        "evidence_sufficiency": 0.001,
+        "web_search": 1.881,
+        "external_evidence_summarizer": 26.083,
+        "risk_obligation_analyzer": 41.386,
+        "checklist_generator": 0.0,
+        "risk_scorer": 94.064,
+        "answer_composer": 71.9
+      },
+      "error": null
+    },
+    {
+      "idx": 25,
+      "query": "A bank outsources critical services to a cloud provider. What DORA obligations apply?",
+      "total_s": 231.145,
+      "attempts": 1,
+      "evidence_score": 0.659,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 9.939,
+        "regulation_router": 0.0,
+        "rag": 1.714,
+        "evidence_sufficiency": 0.001,
+        "web_search": 2.819,
+        "external_evidence_summarizer": 26.806,
+        "risk_obligation_analyzer": 38.535,
+        "checklist_generator": 0.001,
+        "risk_scorer": 96.949,
+        "answer_composer": 54.363
+      },
+      "error": null
+    },
+    {
+      "idx": 26,
+      "query": "What incident reporting obligations exist under DORA?",
+      "total_s": 215.779,
+      "attempts": 1,
+      "evidence_score": 0.706,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 12.326,
+        "regulation_router": 0.0,
+        "rag": 2.544,
+        "evidence_sufficiency": 0.001,
+        "risk_obligation_analyzer": 38.011,
+        "checklist_generator": 0.001,
+        "risk_scorer": 97.281,
+        "answer_composer": 65.603
+      },
+      "error": null
+    },
+    {
+      "idx": 27,
+      "query": "What incident reporting obligations exist under DORA?",
+      "total_s": 212.693,
+      "attempts": 1,
+      "evidence_score": 0.706,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 13.746,
+        "regulation_router": 0.0,
+        "rag": 2.593,
+        "evidence_sufficiency": 0.001,
+        "risk_obligation_analyzer": 46.318,
+        "checklist_generator": 0.001,
+        "risk_scorer": 92.703,
+        "answer_composer": 57.313
+      },
+      "error": null
+    },
+    {
+      "idx": 28,
+      "query": "What incident reporting obligations exist under DORA?",
+      "total_s": 225.785,
+      "attempts": 1,
+      "evidence_score": 0.706,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 12.384,
+        "regulation_router": 0.0,
+        "rag": 2.375,
+        "evidence_sufficiency": 0.001,
+        "risk_obligation_analyzer": 46.028,
+        "checklist_generator": 0.0,
+        "risk_scorer": 90.203,
+        "answer_composer": 74.781
+      },
+      "error": null
+    },
+    {
+      "idx": 29,
+      "query": "What incident reporting obligations exist under DORA?",
+      "total_s": 222.813,
+      "attempts": 1,
+      "evidence_score": 0.706,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 12.952,
+        "regulation_router": 0.0,
+        "rag": 2.643,
+        "evidence_sufficiency": 0.001,
+        "risk_obligation_analyzer": 44.803,
+        "checklist_generator": 0.0,
+        "risk_scorer": 96.581,
+        "answer_composer": 65.83
+      },
+      "error": null
+    },
+    {
+      "idx": 30,
+      "query": "What incident reporting obligations exist under DORA?",
+      "total_s": 207.206,
+      "attempts": 1,
+      "evidence_score": 0.706,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 12.218,
+        "regulation_router": 0.0,
+        "rag": 2.412,
+        "evidence_sufficiency": 0.001,
+        "risk_obligation_analyzer": 40.514,
+        "checklist_generator": 0.0,
+        "risk_scorer": 85.41,
+        "answer_composer": 66.651
+      },
+      "error": null
+    },
+    {
+      "idx": 31,
+      "query": "A bank wants to use AI to assess loan applications. Is this considered a high-risk AI system?",
+      "total_s": 242.063,
+      "attempts": 1,
+      "evidence_score": 0.728,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 30.214,
+        "regulation_router": 0.001,
+        "rag": 1.836,
+        "evidence_sufficiency": 0.002,
+        "web_search": 5.003,
+        "external_evidence_summarizer": 33.767,
+        "risk_obligation_analyzer": 30.564,
+        "checklist_generator": 0.0,
+        "risk_scorer": 72.082,
+        "answer_composer": 68.589
+      },
+      "error": null
+    },
+    {
+      "idx": 32,
+      "query": "A bank wants to use AI to assess loan applications. Is this considered a high-risk AI system?",
+      "total_s": 268.515,
+      "attempts": 1,
+      "evidence_score": 0.666,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 35.043,
+        "regulation_router": 0.0,
+        "rag": 2.043,
+        "evidence_sufficiency": 0.001,
+        "web_search": 4.281,
+        "external_evidence_summarizer": 23.973,
+        "risk_obligation_analyzer": 35.685,
+        "checklist_generator": 0.001,
+        "risk_scorer": 87.338,
+        "answer_composer": 80.141
+      },
+      "error": null
+    },
+    {
+      "idx": 33,
+      "query": "A bank wants to use AI to assess loan applications. Is this considered a high-risk AI system?",
+      "total_s": 223.294,
+      "attempts": 1,
+      "evidence_score": 0.666,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 19.752,
+        "regulation_router": 0.0,
+        "rag": 2.146,
+        "evidence_sufficiency": 0.002,
+        "web_search": 5.197,
+        "external_evidence_summarizer": 26.59,
+        "risk_obligation_analyzer": 24.777,
+        "checklist_generator": 0.001,
+        "risk_scorer": 81.471,
+        "answer_composer": 63.356
+      },
+      "error": null
+    },
+    {
+      "idx": 34,
+      "query": "A bank wants to use AI to assess loan applications. Is this considered a high-risk AI system?",
+      "total_s": 226.879,
+      "attempts": 1,
+      "evidence_score": 0.666,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 29.613,
+        "regulation_router": 0.0,
+        "rag": 2.063,
+        "evidence_sufficiency": 0.001,
+        "web_search": 4.652,
+        "external_evidence_summarizer": 25.59,
+        "risk_obligation_analyzer": 24.796,
+        "checklist_generator": 0.001,
+        "risk_scorer": 66.291,
+        "answer_composer": 73.86
+      },
+      "error": null
+    },
+    {
+      "idx": 16,
+      "query": "What cybersecurity risk management measures are required by NIS2?",
+      "total_s": 2422.652,
+      "attempts": 1,
+      "evidence_score": 0.672,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 29.307,
+        "regulation_router": 0.0,
+        "rag": 1.095,
+        "evidence_sufficiency": 0.001,
+        "web_search": 2.257,
+        "external_evidence_summarizer": 32.304,
+        "risk_obligation_analyzer": 40.742,
+        "checklist_generator": 0.001,
+        "risk_scorer": 2254.364,
+        "answer_composer": 62.572
+      },
+      "error": null
+    },
+    {
+      "idx": 35,
+      "query": "A bank wants to use AI to assess loan applications. Is this considered a high-risk AI system?",
+      "total_s": 250.363,
+      "attempts": 1,
+      "evidence_score": 0.666,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 30.179,
+        "regulation_router": 0.0,
+        "rag": 1.757,
+        "evidence_sufficiency": 0.001,
+        "web_search": 4.434,
+        "external_evidence_summarizer": 27.584,
+        "risk_obligation_analyzer": 26.224,
+        "checklist_generator": 0.001,
+        "risk_scorer": 78.033,
+        "answer_composer": 82.148
+      },
+      "error": null
+    },
+    {
+      "idx": 36,
+      "query": "What transparency obligations apply to generative AI under the AI Act?",
+      "total_s": 191.847,
+      "attempts": 1,
+      "evidence_score": 0.63,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 16.154,
+        "regulation_router": 0.0,
+        "rag": 1.975,
+        "evidence_sufficiency": 0.0,
+        "risk_obligation_analyzer": 48.315,
+        "checklist_generator": 0.0,
+        "risk_scorer": 79.368,
+        "answer_composer": 46.031
+      },
+      "error": null
+    },
+    {
+      "idx": 37,
+      "query": "What transparency obligations apply to generative AI under the AI Act?",
+      "total_s": 224.828,
+      "attempts": 1,
+      "evidence_score": 0.63,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 17.296,
+        "regulation_router": 0.0,
+        "rag": 1.838,
+        "evidence_sufficiency": 0.0,
+        "risk_obligation_analyzer": 47.229,
+        "checklist_generator": 0.0,
+        "risk_scorer": 81.738,
+        "answer_composer": 76.718
+      },
+      "error": null
+    },
+    {
+      "idx": 38,
+      "query": "What transparency obligations apply to generative AI under the AI Act?",
+      "total_s": 230.815,
+      "attempts": 1,
+      "evidence_score": 0.63,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 18.896,
+        "regulation_router": 0.0,
+        "rag": 2.163,
+        "evidence_sufficiency": 0.0,
+        "risk_obligation_analyzer": 43.681,
+        "checklist_generator": 0.0,
+        "risk_scorer": 88.105,
+        "answer_composer": 77.968
+      },
+      "error": null
+    },
+    {
+      "idx": 19,
+      "query": "What cybersecurity risk management measures are required by NIS2?",
+      "total_s": 2440.64,
+      "attempts": 1,
+      "evidence_score": 0.672,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 24.396,
+        "regulation_router": 0.0,
+        "rag": 1.199,
+        "evidence_sufficiency": 0.001,
+        "web_search": 3.275,
+        "external_evidence_summarizer": 35.013,
+        "risk_obligation_analyzer": 32.95,
+        "checklist_generator": 0.0,
+        "risk_scorer": 2291.295,
+        "answer_composer": 52.508
+      },
+      "error": null
+    },
+    {
+      "idx": 39,
+      "query": "What transparency obligations apply to generative AI under the AI Act?",
+      "total_s": 179.655,
+      "attempts": 1,
+      "evidence_score": 0.63,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 16.429,
+        "regulation_router": 0.0,
+        "rag": 1.743,
+        "evidence_sufficiency": 0.001,
+        "risk_obligation_analyzer": 40.513,
+        "checklist_generator": 0.0,
+        "risk_scorer": 86.42,
+        "answer_composer": 34.547
+      },
+      "error": null
+    },
+    {
+      "idx": 40,
+      "query": "What transparency obligations apply to generative AI under the AI Act?",
+      "total_s": 144.719,
+      "attempts": 1,
+      "evidence_score": 0.63,
+      "web_search": false,
+      "node_durations": {
+        "use_case_profiler": 14.811,
+        "regulation_router": 0.0,
+        "rag": 1.695,
+        "evidence_sufficiency": 0.0,
+        "risk_obligation_analyzer": 34.932,
+        "checklist_generator": 0.0,
+        "risk_scorer": 58.072,
+        "answer_composer": 35.206
+      },
+      "error": null
+    },
+    {
+      "idx": 43,
+      "query": "A bank wants to deploy a GenAI chatbot for customer complaints. What regulatory obligations apply?",
+      "total_s": 186.578,
+      "attempts": 1,
+      "evidence_score": 0.709,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 11.357,
+        "regulation_router": 0.0,
+        "rag": 1.768,
+        "evidence_sufficiency": 0.001,
+        "web_search": 4.883,
+        "external_evidence_summarizer": 34.8,
+        "risk_obligation_analyzer": 25.376,
+        "checklist_generator": 0.0,
+        "risk_scorer": 76.05,
+        "answer_composer": 32.341
+      },
+      "error": null
+    },
+    {
+      "idx": 41,
+      "query": "A bank wants to deploy a GenAI chatbot for customer complaints. What regulatory obligations apply?",
+      "total_s": 278.219,
+      "attempts": 1,
+      "evidence_score": 0.646,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 15.717,
+        "regulation_router": 0.0,
+        "rag": 1.602,
+        "evidence_sufficiency": 0.001,
+        "web_search": 4.522,
+        "external_evidence_summarizer": 22.071,
+        "risk_obligation_analyzer": 31.0,
+        "checklist_generator": 0.0,
+        "risk_scorer": 95.522,
+        "answer_composer": 107.776
+      },
+      "error": null
+    },
+    {
+      "idx": 42,
+      "query": "A bank wants to deploy a GenAI chatbot for customer complaints. What regulatory obligations apply?",
+      "total_s": 290.221,
+      "attempts": 1,
+      "evidence_score": 0.709,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 16.55,
+        "regulation_router": 0.0,
+        "rag": 1.049,
+        "evidence_sufficiency": 0.001,
+        "web_search": 5.21,
+        "external_evidence_summarizer": 32.16,
+        "risk_obligation_analyzer": 30.047,
+        "checklist_generator": 0.0,
+        "risk_scorer": 117.88,
+        "answer_composer": 87.319
+      },
+      "error": null
+    },
+    {
+      "idx": 44,
+      "query": "A bank wants to deploy a GenAI chatbot for customer complaints. What regulatory obligations apply?",
+      "total_s": 232.334,
+      "attempts": 1,
+      "evidence_score": 0.709,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 15.33,
+        "regulation_router": 0.0,
+        "rag": 1.517,
+        "evidence_sufficiency": 0.001,
+        "web_search": 3.897,
+        "external_evidence_summarizer": 34.219,
+        "risk_obligation_analyzer": 31.318,
+        "checklist_generator": 0.0,
+        "risk_scorer": 79.656,
+        "answer_composer": 66.393
+      },
+      "error": null
+    },
+    {
+      "idx": 45,
+      "query": "A bank wants to deploy a GenAI chatbot for customer complaints. What regulatory obligations apply?",
+      "total_s": 251.793,
+      "attempts": 1,
+      "evidence_score": 0.646,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 16.377,
+        "regulation_router": 0.0,
+        "rag": 1.805,
+        "evidence_sufficiency": 0.001,
+        "web_search": 5.122,
+        "external_evidence_summarizer": 32.439,
+        "risk_obligation_analyzer": 28.776,
+        "checklist_generator": 0.0,
+        "risk_scorer": 91.505,
+        "answer_composer": 75.759
+      },
+      "error": null
+    },
+    {
+      "idx": 46,
+      "query": "A hospital uses AI for patient triage. What regulatory requirements apply?",
+      "total_s": 297.458,
+      "attempts": 1,
+      "evidence_score": 0.653,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 11.887,
+        "regulation_router": 0.0,
+        "rag": 1.825,
+        "evidence_sufficiency": 0.001,
+        "web_search": 4.316,
+        "external_evidence_summarizer": 29.468,
+        "risk_obligation_analyzer": 28.136,
+        "checklist_generator": 0.0,
+        "risk_scorer": 142.086,
+        "answer_composer": 79.735
+      },
+      "error": null
+    },
+    {
+      "idx": 50,
+      "query": "A hospital uses AI for patient triage. What regulatory requirements apply?",
+      "total_s": 260.105,
+      "attempts": 1,
+      "evidence_score": 0.653,
+      "web_search": true,
+      "node_durations": {
+        "use_case_profiler": 12.599,
+        "regulation_router": 0.0,
+        "rag": 1.726,
+        "evidence_sufficiency": 0.001,
+        "web_search": 6.583,
+        "external_evidence_summarizer": 25.307,
+        "risk_obligation_analyzer": 27.311,
+        "checklist_generator": 0.0,
+        "risk_scorer": 100.476,
+        "answer_composer": 86.093
+      },
+      "error": null
+    },
+    {
+      "idx": 47,
+      "query": "A hospital uses AI for patient triage. What regulatory requirements apply?",
+      "total_s": 1658.887,
+      "attempts": 4,
+      "error": "Invalid json output: \nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE "
+    },
+    {
+      "idx": 48,
+      "query": "A hospital uses AI for patient triage. What regulatory requirements apply?",
+      "total_s": 1631.749,
+      "attempts": 4,
+      "error": "Invalid json output: \nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE "
+    },
+    {
+      "idx": 49,
+      "query": "A hospital uses AI for patient triage. What regulatory requirements apply?",
+      "total_s": 1583.744,
+      "attempts": 4,
+      "error": "Invalid json output: \nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE "
+    }
+  ]
+}
