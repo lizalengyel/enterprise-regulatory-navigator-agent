@@ -1,8 +1,5 @@
 FROM python:3.13-slim
 
-# Non-root user for security
-RUN groupadd -r appuser && useradd -r -g appuser appuser
-
 WORKDIR /app
 
 # System dependencies
@@ -27,14 +24,9 @@ COPY data/vectorstore/ ./data/vectorstore/
 COPY docker-entrypoint.sh ./
 RUN chmod +x docker-entrypoint.sh
 
-# HuggingFace cache dir + ownership
-RUN mkdir -p /home/appuser/.cache && chown -R appuser:appuser /home/appuser /app
-
 ENV PYTHONUNBUFFERED=1
 ENV HF_HOME=/app/.cache/huggingface
 ENV OLLAMA_HOST=http://ollama:11434
-
-USER appuser
 
 EXPOSE 8501
 
