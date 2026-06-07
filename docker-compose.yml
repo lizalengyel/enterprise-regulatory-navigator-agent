@@ -32,7 +32,7 @@ services:
       ollama:
         condition: service_healthy
     volumes:
-      - hf_cache:/home/appuser/.cache/huggingface
+      - hf_cache:/app/.cache/huggingface
       - ./results:/app/results
     restart: unless-stopped
 

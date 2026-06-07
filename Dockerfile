@@ -31,7 +31,7 @@ RUN chmod +x docker-entrypoint.sh
 RUN mkdir -p /home/appuser/.cache && chown -R appuser:appuser /home/appuser /app
 
 ENV PYTHONUNBUFFERED=1
-ENV HF_HOME=/home/appuser/.cache/huggingface
+ENV HF_HOME=/app/.cache/huggingface
 ENV OLLAMA_HOST=http://ollama:11434
 
 USER appuser
