@@ -18,7 +18,7 @@ echo ""
 echo "[entrypoint] Model ready."
 
 echo "[entrypoint] Starting Streamlit ..."
-exec uv run streamlit run ui/app.py \
+exec python -m streamlit run ui/app.py \
     --server.port=8501 \
     --server.address=0.0.0.0 \
     --server.headless=true \
