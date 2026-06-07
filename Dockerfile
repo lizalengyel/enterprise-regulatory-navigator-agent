@@ -13,14 +13,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install uv
 RUN pip install uv --no-cache-dir
 
-# Install CPU-only PyTorch first to prevent uv pulling the CUDA variant
-RUN pip install torch --index-url https://download.pytorch.org/whl/cpu --no-cache-dir
+# Install CPU-only PyTorch + hatchling before uv sync
+# (torch CPU prevents pulling the 2GB CUDA variant; hatchling is needed by --no-build-isolation)
+RUN pip install torch --index-url https://download.pytorch.org/whl/cpu --no-cache-dir && \
+    pip install hatchling --no-cache-dir
 
 # Copy dependency files first (layer caching)
 COPY pyproject.toml uv.lock README.md ./
 
-
-# Install Python dependencies (no-build-isolation reuses the torch already installed)
+# Install Python dependencies (--no-build-isolation reuses the torch already installed)
 RUN uv sync --frozen --no-dev --no-build-isolation
 
 # Copy application source
