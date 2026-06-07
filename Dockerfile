@@ -13,11 +13,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install uv
 RUN pip install uv --no-cache-dir
 
-# Copy dependency files first (layer caching)
-COPY pyproject.toml uv.lock ./
+# Install CPU-only PyTorch first to prevent uv pulling the CUDA variant
+RUN pip install torch --index-url https://download.pytorch.org/whl/cpu --no-cache-dir
 
-# Install Python dependencies
-RUN uv sync --frozen --no-dev
+# Copy dependency files first (layer caching)
+COPY pyproject.toml uv.lock README.md ./
+
+
+# Install Python dependencies (no-build-isolation reuses the torch already installed)
+RUN uv sync --frozen --no-dev --no-build-isolation
 
 # Copy application source
 COPY src/ ./src/
