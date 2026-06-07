@@ -421,9 +421,22 @@ The `docker-entrypoint.sh` script:
 2. Pulls `qwen3:1.7b` via the Ollama API (skipped if already cached)
 3. Starts Streamlit
 
-### GPU note
+### GPU note & known limitations
 
-Docker on Mac cannot pass Metal GPU through to containers — Ollama will run on CPU inside Docker, which is significantly slower than the native setup. For local development, running Ollama natively (`ollama serve`) and the app with `uv run streamlit run ui/app.py` is recommended. Docker is provided for reproducibility and deployment.
+Docker on Mac cannot pass Metal GPU through to containers — Ollama runs on CPU only inside Docker.
+
+**Performance:** The system was developed and tested on an Apple M3 Pro (18GB unified memory) where Ollama uses Metal GPU acceleration and a full query completes in 60–150s. In Docker (CPU-only), the same query takes 300–600s or more.
+
+**Structured output reliability:** `qwen3:1.7b` occasionally produces malformed JSON when running on CPU — the model's thinking mode suppression (`/no_think`) and JSON schema adherence are less reliable at lower inference speeds. On the native Metal setup this was not observed. If you encounter an `OutputParserException` in the validator node, re-running the query usually resolves it.
+
+For the best experience on Mac, run natively:
+
+```bash
+ollama serve           # uses Metal GPU automatically
+uv run streamlit run ui/app.py
+```
+
+Docker is provided for reproducibility — it works correctly, just slowly. On a Linux machine with an NVIDIA GPU and `nvidia-container-toolkit`, Docker will use the GPU and performance will be comparable to native.
 
 ---
 
