@@ -5,38 +5,29 @@ RUN groupadd -r appuser && useradd -r -g appuser appuser
 
 WORKDIR /app
 
-# Install system dependencies
+# System dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Install uv
-RUN pip install uv --no-cache-dir
-
-# Install CPU-only PyTorch + hatchling before uv sync
-# (torch CPU prevents pulling the 2GB CUDA variant; hatchling is needed by --no-build-isolation)
-RUN pip install torch --index-url https://download.pytorch.org/whl/cpu --no-cache-dir && \
-    pip install hatchling --no-cache-dir
-
-# Copy dependency files first (layer caching)
-COPY pyproject.toml uv.lock README.md ./
-
-# Install Python dependencies (--no-build-isolation reuses the torch already installed)
-RUN uv sync --frozen --no-dev --no-build-isolation
-
-# Copy application source
+# Copy package metadata + README (hatchling needs README at build time)
+COPY pyproject.toml README.md ./
 COPY src/ ./src/
+
+# Install all Python dependencies
+# --extra-index-url ensures torch resolves to the CPU-only wheel (~200MB vs 2GB CUDA)
+RUN pip install -e . \
+    --extra-index-url https://download.pytorch.org/whl/cpu \
+    --no-cache-dir
+
+# Copy remaining application files
 COPY ui/ ./ui/
 COPY .streamlit/ ./.streamlit/
-
-# Copy pre-built vectorstore (22MB — avoids re-ingestion at startup)
 COPY data/vectorstore/ ./data/vectorstore/
-
-# Copy entrypoint
 COPY docker-entrypoint.sh ./
 RUN chmod +x docker-entrypoint.sh
 
-# HuggingFace model cache volume mount point
+# HuggingFace cache dir + ownership
 RUN mkdir -p /home/appuser/.cache && chown -R appuser:appuser /home/appuser /app
 
 ENV PYTHONUNBUFFERED=1
