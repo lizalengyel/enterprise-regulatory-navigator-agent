@@ -13,11 +13,11 @@ services:
       - OLLAMA_KEEP_ALIVE=24h
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-sf", "http://localhost:11434/api/version"]
+      test: ["CMD", "ollama", "list"]
       interval: 10s
-      timeout: 5s
+      timeout: 10s
       retries: 10
-      start_period: 20s
+      start_period: 30s
 
   app:
     build: .
